@@ -1,0 +1,60 @@
+/* 
+    Document   : frame
+    Created on : 2013-3-21, 16:52:01
+    Author     : joephoenix
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+body {
+     font-family: 'Helvetica', 'Arial', sans-serif;
+     font-size: 100%;
+     margin: 0px auto 0px auto;
+     width: 750px;
+     background-color: #f4f4f4;
+     position: relative;
+}
+
+#header{
+   margin-bottom:30px;
+}
+
+
+
+#content {
+    clear: both;
+    font-size: 14px;
+}
+
+#footer {
+    clear: both;
+    margin: 80px auto 20px;
+    text-align: center;
+    font-size: 12px;
+    color: rgb(85, 85, 85);
+    border-top: 1px solid rgb(204, 204, 204);
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+#logo {
+    font-family: monospace;
+    font-size: 40px;
+    line-height: 1.4;
+    border-bottom: 2px solid #444;
+}
+
+#logo a { color: #000; text-decoration: none; }
+
+h1#logo { font-size: 40px; font-weight: normal; margin: 0; }
+
+
+
+a { 
+  color: #00c; 
+  text-decoration: none; 
+ }
+ 
+a:visited { color: #00c; }
+
+a:hover { text-decoration: underline; }

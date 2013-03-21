@@ -1,0 +1,57 @@
+<html>
+<head>
+	<title>综合演示用例</title>	
+	<script src="../jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+	<script src="../jquery-validation/1.9.0/jquery.validate.min.js" type="text/javascript"></script>
+	<script src="../jquery-validation/1.9.0/messages_cn.js" type="text/javascript"></script>
+	<script src="js/jquery.maskedinput.js"></script>
+	<script src="js/userFormValid.js" type="text/javascript"></script>
+	
+	<link href="../jquery-validation/1.9.0/validate.css" type="text/css" rel="stylesheet" /></head>
+
+<body>
+	<h2>综合演示用例</h2>
+	<div id="messageBox" class="error" style="display:none">输入有误，请先更正。</div>
+	<form id="loginForm"  action="" method="post">
+		<fieldset class="prepend-top">
+			<legend>登录</legend>
+			<div>
+				<label for="username" class="field">名称:</label>
+				<input type="text" id="username" name="username" size="40" value="" class="required" />
+			</div>
+			
+				<div>
+				<label for="code" class="field">code</label>
+				<input type="text" id="code" name="code" size="40" class="required"/>
+			</div>
+			
+			<div>
+				<label for="password" class="field">密码:</label>
+				<input type="password" id="password" name="password" size="40" class="required"/>
+			</div>
+			
+			
+			<div>
+				<label for="password2" class="field">密码:</label>
+				<input type="text" id="password2" name="password2" class="required" equalTo="#password" size="40" />
+			</div>
+			
+			<div>
+				<label for="mail" class="field">mail</label>
+				<input type="text" id="mail" name="mail" class="required email" size="40" />
+			</div>
+			
+				
+			<div>
+				<label for="d" class="field">digtal</label>
+				<input type="text" id="d" name="d" class="required"  size="40" />
+			</div>
+		</fieldset>
+		<div>
+			<input type="checkbox" id="rememberMe" name="rememberMe"/> <label for="rememberMe">记住我</label>
+			<span style="padding-left:10px;"><input id="submit" class="button" type="submit" value="登录"/></span>
+		</div>
+			<div>(管理员<b>admin/admin</b>, 普通用户<b>user/user</b>)</div>
+	</form>
+</body>
+</html>
