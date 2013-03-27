@@ -45,7 +45,7 @@
     <mvc:interceptors>
         <mvc:interceptor>
             <mvc:mapping path="/**" />
-            <bean class="com.web.interceptor.MyInterceptor" />
+            <bean class="cn.web.interceptor.MyInterceptor" />
         </mvc:interceptor>	
     </mvc:interceptors>
 		

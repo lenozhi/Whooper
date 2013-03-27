@@ -1,0 +1,107 @@
+/* 
+    Document   : register
+    Created on : 2013-3-21, 16:52:23
+    Author     : joephoenix
+    Description:
+        Purpose of the stylesheet follows.
+*/
+#userpanel {
+    float: right;
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: right;
+}
+
+#userpanel a { text-decoration: underline; }
+
+#explanation {
+    height: 280px;
+}
+
+#howitworks {
+    float: left; 
+    width: 350px;
+    padding-left: 50px;
+    padding-top: 20px;
+}
+
+#howitworks li.first { padding-bottom: 14px; }
+
+#howitworks li .bookmarklet { margin-top: 2px; }
+
+#loginarea {
+    float: left; 
+    width: 350px;
+    padding-left: 50px;
+    padding-top: 20px;
+}
+
+#useremail {
+    float: left; 
+    width: 250px;
+    padding-left: 50px;
+    padding-top: 20px;
+}
+
+#emailinput {
+    float: left; 
+    width: 250px;
+    padding-left: 50px;
+    padding-top: 20px;
+}
+
+#password {
+    float: left; 
+    width: 250px;
+    padding-left: 50px;
+    padding-top: 20px;
+}
+
+#pwdInput{
+    float: left; 
+    width: 250px;
+    padding-left: 50px;
+    padding-top: 20px; 
+}
+
+#loginButton {
+    float: left; 
+    width: 250px;
+    padding-left: 100px;
+    padding-top: 30px; 
+}
+
+
+#outputdevices {
+    float: right;
+    width: 270px;
+}
+
+.outputdevice {
+    float: left;
+    width: 135px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.section_header2 {
+    background-color: #444;
+    color: #ddd;
+    text-transform: uppercase;
+    padding: 4px;
+    margin: 0 0 20px 0;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.section_header {
+    color: #444;
+    text-transform: uppercase;
+    padding: 4px 0;
+    margin: 0 0 20px 0;
+    font-weight: normal;
+    font-size: 14px;
+    border-bottom: 1px solid #ccc;
+}
+
+

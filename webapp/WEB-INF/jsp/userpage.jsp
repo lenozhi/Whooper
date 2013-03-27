@@ -11,6 +11,7 @@
     <body>        
         <h1>用户信息</h1>
         <h4>${user}</h4>
+        <h5>${userfrom}</h5>
         <h4>${watches}</h4>
         <h4>${fans}</h4>
         <table>
@@ -19,13 +20,6 @@
                 <td width="150">提醒内容</td>
                 <td width="100">提醒时间</td>
             </tr>
-            <c:forEach items="${contexts}" var="con">		
-                <tr>                  
-                    <td>${con.msgName}</td>
-                    <td>${con.msgContext}</td>
-                    <td>${con.noticeStamp}</td>
-                </tr>
-            </c:forEach>
         </table>
     </body>
 </html>

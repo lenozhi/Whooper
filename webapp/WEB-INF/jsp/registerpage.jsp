@@ -15,9 +15,9 @@
     <body>
       <div id="header">
 	    <div id="userpanel">
-		  <a href="/login">登录</a>
+		  <a href="login">登录</a>
 		  <span style="color: #ccc;">•</span>
-		  <a href="/register">注册</a>
+		  <a href="/Whooper">首页</a>
 		</div>
 		<h1 id="logo">
 		  <a class="logo" href="/">随时记</a>
