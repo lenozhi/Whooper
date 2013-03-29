@@ -20,6 +20,16 @@
                 <td width="150">提醒内容</td>
                 <td width="100">提醒时间</td>
             </tr>
+            <c:forEach items="${alarms}" var="alarm">		
+                <tr>                  
+                    <td>${alarm.TITLE}</td>
+                    <td>${alarm.CONTENT}</td>
+                    <td>${alarm.ALARM_TYPE}</td>
+                    <td>${alarm.STATUS}</td>
+                    <td>${alarm.CREATETIME}</td>
+                    <td>${alarm.ALARM_DAY} &nbsp;&nbsp; ${alarm.ALARM_TIME}</td>
+                </tr>
+            </c:forEach>
         </table>
     </body>
 </html>

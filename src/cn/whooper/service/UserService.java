@@ -12,7 +12,6 @@ import cn.whooper.repository.UserRepository;
 import cn.whooper.repository.UserWatchRepository;
 import java.util.HashMap;
 import java.util.Map;
-import javax.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -25,11 +24,11 @@ import org.springframework.transaction.annotation.Transactional;
 @Service("userService")
 public class UserService {
 
-    @Resource(name = "userRepository")
+    @Autowired
     private UserRepository userRepository;
-    @Resource(name = "userWatchRepository")
+    @Autowired
     private UserWatchRepository userWatchRepository;
-    @Resource(name = "userFansRepository")
+    @Autowired
     private UserFansRepository userFansRepository;
 
     @Transactional
@@ -69,9 +68,10 @@ public class UserService {
 
     public Map<String, String> getUserRealitionship(String email) {
         Map<String, String> m_realitionShip = new HashMap<String, String>();
-        m_realitionShip.put("idenfity", findByEmail(email).getU_ID().toString());
-        m_realitionShip.put("userfrom", setUserFrom(findByEmail(email).getAccounttype()));
-        m_realitionShip.put("links", findByEmailToWatch(email).getWatches().toString());
+        User author = this.findByEmail(email);
+        m_realitionShip.put("idenfity", author.getU_ID().toString());
+        m_realitionShip.put("userfrom", setUserFrom(author.getAccounttype()));
+        m_realitionShip.put("links", new String(findByEmailToWatch(email).getWatches()));
         m_realitionShip.put("fans", new String(findByEmailToFans(email).getFans()));
         return m_realitionShip;
     }

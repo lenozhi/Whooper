@@ -7,13 +7,12 @@ package cn.whooper.repository;
 import cn.whooper.domain.UserFans;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.PagingAndSortingRepository;
-import org.springframework.stereotype.Repository;
 
 /**
+ * 读取用户粉丝的接口
  *
  * @author joephoenix
  */
-@Repository("userFansRepository")
 public interface UserFansRepository extends CrudRepository<UserFans, Integer>,
         PagingAndSortingRepository<UserFans, Integer> {
 
