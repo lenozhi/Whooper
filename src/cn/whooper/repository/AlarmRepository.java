@@ -25,7 +25,7 @@ public interface AlarmRepository extends CrudRepository<AlarmObject, Integer>,
      * @param AUTHOR 用户id
      * @return
      */
-    public List<AlarmObject> findByAUTHOR(String AUTHOR);
+    public List<AlarmObject> findByAuthor(String author);
 
     /**
      * 按照提醒的标题查询
@@ -33,7 +33,7 @@ public interface AlarmRepository extends CrudRepository<AlarmObject, Integer>,
      * @param TITLE 提醒的标题
      * @return
      */
-    public AlarmObject findByTITLE(String TITLE);
+    public AlarmObject findByTitle(String title);
 
     /**
      * 查询创建时间在时间区间内的提醒
@@ -42,6 +42,6 @@ public interface AlarmRepository extends CrudRepository<AlarmObject, Integer>,
      * @param after 未来时间范围
      * @return
      */
-    @Query("select AlarmObject a from AlarmObject where a.CREATETIME between ?1 and ?2")
+    @Query("select a from AlarmObject a where a.createtime between ?1 and ?2")
     public AlarmObject selectByCreatetimeZone(Date before, Date after);
 }

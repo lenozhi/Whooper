@@ -27,96 +27,97 @@ public class AlarmObject implements Serializable {
     @Id
     @GeneratedValue(generator = "paymentableGenerator")
     @GenericGenerator(name = "paymentableGenerator", strategy = "uuid")
-    private Integer AID;
+    @Column(name = "AID")
+    private Integer aid;
     @Column(name = "TITLE")
-    private String TITLE;
+    private String title;
     @Column(name = "CONTENT")
-    private String CONTENT;
+    private String content;
     @Column(name = "AUTHOR")
-    private String AUTHOR;
+    private String author;
     @Column(name = "CREATETIME", columnDefinition = "TIMESTAMP", insertable = true, updatable = false)
     @Temporal(TemporalType.TIMESTAMP)
-    private Date CREATETIME;
+    private Date createtime;
     @Column(name = "ALARM_TYPE")
-    private Integer ALARM_TYPE;
+    private Integer alarmType;
     @Column(name = "ALARM_DAY", columnDefinition = "DATE", insertable = true, updatable = true)
     @Temporal(TemporalType.DATE)
-    private Date ALARM_DAY;
+    private Date alarmDate;
     @Column(name = "ALARM_TIME", columnDefinition = "TIME", insertable = true, updatable = true)
     @Temporal(TemporalType.TIME)
-    private Date ALARM_TIME;
+    private Date alarmTime;
     @Column(name = "STATUS")
-    private Integer STATUS;
+    private Integer status;
 
-    public Integer getAID() {
-        return AID;
+    public Integer getAid() {
+        return aid;
     }
 
-    public void setAID(Integer AID) {
-        this.AID = AID;
+    public void setAid(Integer aid) {
+        this.aid = aid;
     }
 
-    public String getTITLE() {
-        return TITLE;
+    public String getTitle() {
+        return title;
     }
 
-    public void setTITLE(String TITLE) {
-        this.TITLE = TITLE;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public String getCONTENT() {
-        return CONTENT;
+    public String getContent() {
+        return content;
     }
 
-    public void setCONTENT(String CONTENT) {
-        this.CONTENT = CONTENT;
+    public void setContent(String content) {
+        this.content = content;
     }
 
-    public String getAUTHOR() {
-        return AUTHOR;
+    public String getAuthor() {
+        return author;
     }
 
-    public void setAUTHOR(String AUTHOR) {
-        this.AUTHOR = AUTHOR;
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
-    public Date getCREATETIME() {
-        return CREATETIME;
+    public Date getCreatetime() {
+        return createtime;
     }
 
-    public void setCREATETIME(Date CREATETIME) {
-        this.CREATETIME = CREATETIME;
+    public void setCreatetime(Date createtime) {
+        this.createtime = createtime;
     }
 
-    public Integer getALARM_TYPE() {
-        return ALARM_TYPE;
+    public Integer getAlarmType() {
+        return alarmType;
     }
 
-    public void setALARM_TYPE(Integer ALARM_TYPE) {
-        this.ALARM_TYPE = ALARM_TYPE;
+    public void setAlarmType(Integer alarmType) {
+        this.alarmType = alarmType;
     }
 
-    public Date getALARM_DAY() {
-        return ALARM_DAY;
+    public Date getAlarmDate() {
+        return alarmDate;
     }
 
-    public void setALARM_DAY(Date ALARM_DAY) {
-        this.ALARM_DAY = ALARM_DAY;
+    public void setAlarmDate(Date alarmDate) {
+        this.alarmDate = alarmDate;
     }
 
-    public Date getALARM_TIME() {
-        return ALARM_TIME;
+    public Date getAlarmTime() {
+        return alarmTime;
     }
 
-    public void setALARM_TIME(Date ALARM_TIME) {
-        this.ALARM_TIME = ALARM_TIME;
+    public void setAlarmTime(Date alarmTime) {
+        this.alarmTime = alarmTime;
     }
 
-    public Integer getSTATUS() {
-        return STATUS;
+    public Integer getStatus() {
+        return status;
     }
 
-    public void setSTATUS(Integer STATUS) {
-        this.STATUS = STATUS;
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 }

@@ -22,6 +22,6 @@ public class AlarmInfoService {
     private AlarmRepository alarmRepository;
 
     public List<AlarmObject> findInfoByAuthor(String AuthorId) {
-        return alarmRepository.findByAUTHOR(AuthorId);
+        return alarmRepository.findByAuthor(AuthorId);
     }
 }
