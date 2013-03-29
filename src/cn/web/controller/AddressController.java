@@ -61,5 +61,5 @@ public class AddressController {
 		// This will resolve to /WEB-INF/jsp/addressespage.jsp
 		return "addressespage";
 	}
-
+/*xxxxxxxx*/
 }
