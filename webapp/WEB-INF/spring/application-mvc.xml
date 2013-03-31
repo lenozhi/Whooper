@@ -32,7 +32,7 @@
                             <value>text/html;charset=UTF-8</value>                             
                             <value>text/plain;charset=UTF-8</value>
                             <value>application/json;charset=UTF-8</value>  
-	                	
+	                	    <value>text/css;charset=UTF-8</value>
                         </list>   
                     </property>   
                 </bean>   
@@ -55,8 +55,8 @@
     <!-- 配置注解驱动的Spring MVC Controller 的编程模型.注:次标签只在 Servlet MVC工作! -->
 
     <mvc:resources mapping="/js/**" location="/static/" />
-    <mvc:resources mapping="/css/**" location="/css/" />
-    <mvc:resources mapping="/images/**" location="/images/" />  
+    <mvc:resources mapping="/css/**" location="/static/css/" />
+    <mvc:resources mapping="/images/**" location="/static/images/" />  
     
     <!-- JMX服务 -->
     <context:mbean-export/>

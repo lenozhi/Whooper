@@ -10,11 +10,14 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 
 import org.springframework.web.bind.ServletRequestBindingException;
 import org.springframework.web.bind.ServletRequestUtils;
 
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import org.springframework.web.servlet.ModelAndView;
 
@@ -23,11 +26,12 @@ public class ExcelController {
 
     protected static Logger logger = Logger.getLogger("controller");
 
+
     @RequestMapping("/")
     public String redirectIndexPage() {
         return "indexpage";
     }
-
+    
     @RequestMapping("/login")
     public String redirectLoginPage() {
         return "loginpage";

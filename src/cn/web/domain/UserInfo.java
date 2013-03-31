@@ -10,7 +10,7 @@ import java.io.Serializable;
  *
  * @author joephoenix
  */
-public class Userinfo implements Serializable {
+public class UserInfo implements Serializable {
 
     private static final long serialVersionUID = -5785857960597910259L;
     private String id;
@@ -18,10 +18,10 @@ public class Userinfo implements Serializable {
     private String sex;
     private String nikename;
 
-    public Userinfo() {
+    public UserInfo() {
     }
 
-    public Userinfo(String id, String email, String sex, String nikename) {
+    public UserInfo(String id, String email, String sex, String nikename) {
         this.id = id;
         this.email = email;
         this.sex = sex;

@@ -4,7 +4,7 @@
  */
 package cn.web.dao;
 
-import cn.web.domain.Userinfo;
+import cn.web.domain.UserInfo;
 import cn.web.support.AbstractBaseMongoTemplete;
 import java.util.List;
 import org.apache.log4j.Logger;
@@ -35,9 +35,9 @@ public class UeseInfoDao extends AbstractBaseMongoTemplete {
     /**
      * 新增
      *
-     * @param Userinfo 用户信息对象
+     * @param UserInfo 用户信息对象
      */
-    public void insert(Userinfo user) {
+    public void insert(UserInfo user) {
         mongoTemplate.insert(user);
     }
 
@@ -49,7 +49,7 @@ public class UeseInfoDao extends AbstractBaseMongoTemplete {
      * @param id
      */
     public void deleteById(String id) {
-        Userinfo user = new Userinfo(id, null, null, null);
+        UserInfo user = new UserInfo(id, null, null, null);
         mongoTemplate.remove(user);
     }
 
@@ -60,10 +60,10 @@ public class UeseInfoDao extends AbstractBaseMongoTemplete {
      *
      * @param criteriaUser
      */
-    public void delete(Userinfo exisUser) {
+    public void delete(UserInfo exisUser) {
         Criteria criteria = Criteria.where("email").gt(exisUser.getEmail());
         Query query = new Query(criteria);
-        mongoTemplate.remove(query, Userinfo.class);
+        mongoTemplate.remove(query, UserInfo.class);
     }
 
     /**
@@ -73,13 +73,13 @@ public class UeseInfoDao extends AbstractBaseMongoTemplete {
      *
      * @param updateUserInfo 修改的用户信息
      */
-    public void updateById(Userinfo updateUserInfo) {
+    public void updateById(UserInfo updateUserInfo) {
         Criteria criteria = Criteria.where("id").is(updateUserInfo.getId());
         Query query = new Query(criteria);
         Update update = Update.update("email", updateUserInfo.getEmail()).
                 set("nikname", updateUserInfo.getNikename()).
                 set("sex", updateUserInfo.getSex());
-        mongoTemplate.updateFirst(query, update, Userinfo.class);
+        mongoTemplate.updateFirst(query, update, UserInfo.class);
     }
 
     /**
@@ -88,8 +88,8 @@ public class UeseInfoDao extends AbstractBaseMongoTemplete {
      * @param id
      * @return
      */
-    public Userinfo findById(String id) {
-        return mongoTemplate.findById(id, Userinfo.class);
+    public UserInfo findById(String id) {
+        return mongoTemplate.findById(id, UserInfo.class);
     }
 
     /**
@@ -97,8 +97,8 @@ public class UeseInfoDao extends AbstractBaseMongoTemplete {
      *
      * @return
      */
-    public List<Userinfo> findAll() {
-        return mongoTemplate.findAll(Userinfo.class);
+    public List<UserInfo> findAll() {
+        return mongoTemplate.findAll(UserInfo.class);
     }
 
     /**
@@ -109,11 +109,11 @@ public class UeseInfoDao extends AbstractBaseMongoTemplete {
      * @param limit
      * @return
      */
-    public List<Userinfo> find(Userinfo criteriaUser, int skip, int limit) {
+    public List<UserInfo> find(UserInfo criteriaUser, int skip, int limit) {
         Query query = getQuery(criteriaUser);
         query.skip(skip);
         query.limit(limit);
-        return mongoTemplate.find(query, Userinfo.class);
+        return mongoTemplate.find(query, UserInfo.class);
     }
 
     /**
@@ -122,9 +122,9 @@ public class UeseInfoDao extends AbstractBaseMongoTemplete {
      * @param userinfo
      * @return
      */
-    public long count(Userinfo userinfo) {
+    public long count(UserInfo userinfo) {
         Query query = getQuery(userinfo);
-        return mongoTemplate.count(query, Userinfo.class);
+        return mongoTemplate.count(query, UserInfo.class);
     }
 
     /**
@@ -135,9 +135,9 @@ public class UeseInfoDao extends AbstractBaseMongoTemplete {
      * @param userinfo
      * @return
      */
-    private Query getQuery(Userinfo userinfo) {
+    private Query getQuery(UserInfo userinfo) {
         if (userinfo == null) {
-            userinfo = new Userinfo();
+            userinfo = new UserInfo();
         }
         Query query = new Query();
         if (userinfo.getId() != null) {
