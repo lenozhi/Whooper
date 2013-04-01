@@ -13,7 +13,9 @@
 
 	<!-- 首页 -->
 	<definition name="indexpage" template="/WEB-INF/jsp/common/indexpage.jsp" />
-
+	<definition name="loginpage" template="/WEB-INF/jsp/loginpage.jsp" />
+	<definition name="registerpage" template="/WEB-INF/jsp/registerpage.jsp" />
+	
     <!-- 其他页面 -->
 	<definition name="u/*" extends="base.definition">
     <put-attribute name="content" value="/WEB-INF/jsp/{1}.jsp" />
