@@ -167,3 +167,4 @@ pip-log.txt
 build.xml
 /conf
 /build
+/webapp/META-INF
