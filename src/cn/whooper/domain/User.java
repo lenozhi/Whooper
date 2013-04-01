@@ -21,7 +21,7 @@ public class User implements Serializable {
 
     @Id
     @GeneratedValue
-    private Integer U_ID;
+    private Long U_ID;
     //邮箱
     private String email;
     //密码
@@ -29,11 +29,11 @@ public class User implements Serializable {
     //账号类型
     private Integer accounttype;
 
-    public Integer getU_ID() {
+    public Long getU_ID() {
         return U_ID;
     }
 
-    public void setU_ID(Integer U_ID) {
+    public void setU_ID(Long U_ID) {
         this.U_ID = U_ID;
     }
 

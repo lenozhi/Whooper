@@ -18,8 +18,21 @@
             <tr>                
                 <td width="150">提醒标题</td>
                 <td width="150">提醒内容</td>
+                <td width="100">提醒类型</td>
+                <td width="100">提醒状态</td>
+                <td width="100">提醒创建时间</td>
                 <td width="100">提醒时间</td>
             </tr>
+            <c:forEach items="${alarms}" var="alarm">		
+                <tr>                  
+                    <td>${alarm.title}</td>
+                    <td>${alarm.content}</td>
+                    <td>${alarm.alarmType}</td>
+                    <td>${alarm.status}</td>
+                    <td>${alarm.createtime}</td>
+                    <td>${alarm.alarmDate} &nbsp;&nbsp; ${alarm.alarmTime}</td>
+                </tr>
+            </c:forEach>
         </table>
     </body>
 </html>
