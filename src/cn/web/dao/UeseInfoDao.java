@@ -71,14 +71,14 @@ public class UeseInfoDao extends AbstractBaseMongoTemplete {
      *
      * 使用$set修改器
      *
-     * @param updateUserInfo 修改的用户信息
+     * @param updateUserinfo 修改的用户信息
      */
-    public void updateById(Userinfo updateUserInfo) {
-        Criteria criteria = Criteria.where("id").is(updateUserInfo.getId());
+    public void updateById(Userinfo updateUserinfo) {
+        Criteria criteria = Criteria.where("id").is(updateUserinfo.getId());
         Query query = new Query(criteria);
-        Update update = Update.update("email", updateUserInfo.getEmail()).
-                set("nikname", updateUserInfo.getNikename()).
-                set("sex", updateUserInfo.getSex());
+        Update update = Update.update("email", updateUserinfo.getEmail()).
+                set("nikname", updateUserinfo.getNikename()).
+                set("sex", updateUserinfo.getSex());
         mongoTemplate.updateFirst(query, update, Userinfo.class);
     }
 
