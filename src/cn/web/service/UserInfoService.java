@@ -7,7 +7,7 @@ package cn.web.service;
 import cn.web.dao.UserinfoDao;
 import cn.web.dao.UsersFansDao;
 import cn.web.dao.UsersLinkDao;
-import cn.web.domain.UserInfo;
+import cn.web.domain.Userinfo;
 import cn.web.domain.UsersFans;
 import cn.web.domain.UsersLink;
 import java.util.HashMap;
@@ -41,7 +41,7 @@ public class UserInfoService {
      *
      * @param user
      */
-    public void insertUserInfo(UserInfo user) {
+    public void insertUserInfo(Userinfo user) {
         userinfoDao.insert(user);
     }
 

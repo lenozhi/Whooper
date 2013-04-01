@@ -4,7 +4,7 @@
  */
 package cn.web.dao;
 
-import cn.web.domain.UserInfo;
+import cn.web.domain.Userinfo;
 import java.util.List;
 import java.util.regex.Pattern;
 import javax.annotation.Resource;
@@ -32,8 +32,8 @@ public class UserinfoDao {
      *
      * @return
      */
-    public List<UserInfo> findAll() {
-        return mongoTemplate.find(new Query(), UserInfo.class);
+    public List<Userinfo> findAll() {
+        return mongoTemplate.find(new Query(), Userinfo.class);
     }
 
     /**
@@ -42,10 +42,10 @@ public class UserinfoDao {
      * @param regex
      * @return
      */
-    public List<UserInfo> findByRegex(String regex) {
+    public List<Userinfo> findByRegex(String regex) {
         Pattern pattern = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
         Criteria criteria = new Criteria("email").regex(pattern.toString());
-        return mongoTemplate.find(new Query(criteria), UserInfo.class);
+        return mongoTemplate.find(new Query(criteria), Userinfo.class);
     }
 
     /**
@@ -54,8 +54,8 @@ public class UserinfoDao {
      * @param id
      * @return
      */
-    public UserInfo findOne(String id) {
-        return mongoTemplate.findOne(new Query(Criteria.where("id").is(id)), UserInfo.class);
+    public Userinfo findOne(String id) {
+        return mongoTemplate.findOne(new Query(Criteria.where("id").is(id)), Userinfo.class);
     }
 
     /**
@@ -63,7 +63,7 @@ public class UserinfoDao {
      *
      * @param userinfo new user information
      */
-    public void insert(UserInfo userinfo) {
+    public void insert(Userinfo userinfo) {
         mongoTemplate.insert(userinfo);
     }
 
@@ -71,9 +71,9 @@ public class UserinfoDao {
      * 删除所有的用户信息 不建议使用
      */
     public void removeAll() {
-        List<UserInfo> list = this.findAll();
+        List<Userinfo> list = this.findAll();
         if (list != null) {
-            for (UserInfo ui : list) {
+            for (Userinfo ui : list) {
                 mongoTemplate.remove(ui);
             }
         }
@@ -90,8 +90,8 @@ public class UserinfoDao {
         Criteria criteria = Criteria.where("id").in(id);
         if (criteria == null) {
             Query query = new Query(criteria);
-            if (null != query && mongoTemplate.findOne(query, UserInfo.class) != null) {
-                mongoTemplate.remove(mongoTemplate.findOne(query, UserInfo.class));
+            if (null != query && mongoTemplate.findOne(query, Userinfo.class) != null) {
+                mongoTemplate.remove(mongoTemplate.findOne(query, Userinfo.class));
             }
         }
     }
