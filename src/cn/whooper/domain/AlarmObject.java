@@ -25,8 +25,8 @@ import org.hibernate.annotations.GenericGenerator;
 public class AlarmObject implements Serializable {
 
     @Id
-    @GeneratedValue(generator = "paymentableGenerator")
-    @GenericGenerator(name = "paymentableGenerator", strategy = "uuid")
+    @GeneratedValue(generator = "paymentableGenerator")     
+    @GenericGenerator(name = "paymentableGenerator", strategy = "increment")   
     @Column(name = "AID")
     private Integer aid;
     @Column(name = "TITLE")

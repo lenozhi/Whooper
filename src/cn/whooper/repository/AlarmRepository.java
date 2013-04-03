@@ -5,8 +5,13 @@
 package cn.whooper.repository;
 
 import cn.whooper.domain.AlarmObject;
+import cn.whooper.domain.UserFans;
+
 import java.util.Date;
 import java.util.List;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.PagingAndSortingRepository;
@@ -17,7 +22,7 @@ import org.springframework.data.repository.PagingAndSortingRepository;
  * @author joephoenix
  */
 public interface AlarmRepository extends CrudRepository<AlarmObject, Integer>,
-        PagingAndSortingRepository<AlarmObject, Integer> {
+PagingAndSortingRepository<AlarmObject, Integer>   {
 
     /**
      * 按照用户查询用户自己的提醒
@@ -44,4 +49,7 @@ public interface AlarmRepository extends CrudRepository<AlarmObject, Integer>,
      */
     @Query("select a from AlarmObject a where a.createtime between ?1 and ?2")
     public AlarmObject selectByCreatetimeZone(Date before, Date after);
+    
+    @Query("select a from AlarmObject a ")
+    public Page<AlarmObject> findBySome(Pageable p);
 }
