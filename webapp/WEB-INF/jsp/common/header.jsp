@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/jsp/common/taglibs.jsp"%>
 <div id="header" class="container">
 			<div id="logo">
 				<h1><a href="#">微 <span>提醒</span></a></h1>

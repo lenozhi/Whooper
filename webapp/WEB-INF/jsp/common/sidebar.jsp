@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>	
+<%@ include file="/WEB-INF/jsp/common/taglibs.jsp"%>
 	<div id="sidebar">
 				<ul>
 					<li>
@@ -16,7 +17,7 @@
 					<li>
 						<h2></h2>
 						<ul>
-							<li><a href="list/1">我的提醒</a></li>
+							<li><a href="${ctx}/list/1">我的提醒</a></li>
 							<li><a href="test">提醒我的</a></li>
 							<li><a href="#">广场</a></li>
 							<li><a href="#">捞捞看</a></li>
