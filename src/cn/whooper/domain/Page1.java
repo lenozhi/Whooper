@@ -2,7 +2,7 @@ package cn.whooper.domain;
 
 import java.util.List;
 
-public class Page {
+public class Page1 {
 
 	public static int RECORD_PER_PAGE = 5;
 	public static int INDEXES=6;
@@ -16,10 +16,11 @@ public class Page {
 		this.data = data;
 	}
 	
-	public String getPages(int cur){
+	public static String getPages(int cur){
 		
 		StringBuffer s = new StringBuffer();
-		for (int i=(cur-1); i<(cur-1)+6; i++){
+		if (cur ==1 ) cur++;
+		for (int i=(cur-1); i<(cur-1)+INDEXES; i++){
 			s.append(i).append(" ");
 		}
 		return s.toString();

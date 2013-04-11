@@ -20,7 +20,7 @@ this.closingTime = closingTime;
 
 	public boolean preHandle(HttpServletRequest request,
 			HttpServletResponse response, Object handler) throws Exception {
-		System.out.println(request.getPathInfo());
+		System.out.println(request.getPathInfo()+" "+handler);
 		Calendar cal = Calendar.getInstance();
 		int hour = cal.get(Calendar.HOUR_OF_DAY);
 		if (openingTime <= hour && hour < closingTime) {

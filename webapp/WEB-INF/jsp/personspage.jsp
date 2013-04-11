@@ -71,7 +71,7 @@ function (){
 			  	 cnName:$("#id").val()
 			  	},
 				function(data){							  													
-					alert(data);							   
+												   
 				});
 });
 
